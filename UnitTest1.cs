@@ -45,11 +45,10 @@ namespace XUnitTestProject1{
             bool a = Flag.GetFlag();
 
             Flag.Dispose();
-
-            Flag.SetFlag(1);
+    
             bool b = Flag.GetFlag();
-
-            Assert.Equal(a, b);
+        
+            Assert.NotEqual(a, b);
 
         }
 

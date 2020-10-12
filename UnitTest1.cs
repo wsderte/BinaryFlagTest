@@ -49,8 +49,7 @@ namespace XUnitTestProject1{
             Flag.SetFlag(1);
             bool b = Flag.GetFlag();
 
-            Assert.NotEqual(a, b);
-            //  GC.SuppressFinalize();
+            Assert.Equal(a, b);
 
         }
 

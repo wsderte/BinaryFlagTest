@@ -15,6 +15,17 @@ namespace XUnitTestProject1{
         }
 
         [Fact]
+        public void TestGetFlagLengthZero()
+        {
+          
+           Assert.ThrowsAny<Exception>(() => {
+                IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(0);
+           });
+
+        }
+
+
+        [Fact]
         public void TestSetFlag()
         {
             IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
@@ -36,7 +47,27 @@ namespace XUnitTestProject1{
 
         }
 
-       [Fact]
+        [Fact]
+        public void TestREsetFlagAtThePositionMoreThanItHas()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+            Assert.ThrowsAny<ArgumentOutOfRangeException>(() => {
+                Flag.ResetFlag(200);
+            });
+
+        }
+
+        [Fact]
+        public void TestREsetFlagAtZeroPosition()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2, true);
+             Flag.ResetFlag(0);
+            Assert.Equal(false, Flag.GetFlag());
+
+        }
+
+
+        [Fact]
         public void TestDispose()
         {
             IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);

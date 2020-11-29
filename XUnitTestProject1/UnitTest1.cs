@@ -5,8 +5,9 @@ using IIG.BinaryFlag;
 
 namespace XUnitTestProject1{
     public class UnitTest1 {
+        // первая граница  2   потому проверим значения 1 2 3 
         [Fact]
-        public void TestInitializeLengthMoreThan1()
+        public void TestInitializeLengthMoreThan1_2()
         {
             IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(2);
             Assert.NotNull(Flag);
@@ -14,12 +15,75 @@ namespace XUnitTestProject1{
         }
 
         [Fact]
-        public void TestInitializeMaxLenth()
+        public void TestInitializeLengthMoreThan1_1()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(1);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestInitializeLengthMoreThan1_3()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(3);
+            Assert.NotNull(Flag);
+
+        }
+
+
+        // вторая граница   17179868704 потому проверим значения   17179868703  17179868704 17179868705 
+        [Fact]
+        public void TestInitializeMaxLenth_17179868704()
         {
             IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868704);
             Assert.NotNull(Flag);
 
         }
+
+        [Fact]
+        public void TestInitializeMaxLenth_17179868703()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868703);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestInitializeMaxLenth_17179868705()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(17179868705);
+            Assert.NotNull(Flag);
+
+        }
+
+        // также проверим значения внутри границ
+        [Fact]
+        public void TestInitializeInRange_10()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(10);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestInitializeInRange_9()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(9);
+            Assert.NotNull(Flag);
+
+        }
+
+        [Fact]
+        public void TestInitializeInRange_22()
+        {
+            IIG.BinaryFlag.MultipleBinaryFlag Flag = new IIG.BinaryFlag.MultipleBinaryFlag(22);
+            Assert.NotNull(Flag);
+
+        }
+
+
+
+
 
         [Fact]
         public void TestInitializeTrue()

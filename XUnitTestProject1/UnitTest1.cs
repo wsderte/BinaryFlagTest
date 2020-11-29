@@ -5,7 +5,7 @@ using IIG.BinaryFlag;
 
 namespace XUnitTestProject1{
     public class UnitTest1 {
-        // первая граница  2   потому проверим значения 1 2 3 
+        
         [Fact]
         public void TestInitializeLengthMoreThan1_2()
         {
@@ -31,7 +31,7 @@ namespace XUnitTestProject1{
         }
 
 
-        // вторая граница   17179868704 потому проверим значения   17179868703  17179868704 17179868705 
+        
         [Fact]
         public void TestInitializeMaxLenth_17179868704()
         {
@@ -56,7 +56,6 @@ namespace XUnitTestProject1{
 
         }
 
-        // также проверим значения внутри границ
         [Fact]
         public void TestInitializeInRange_10()
         {
